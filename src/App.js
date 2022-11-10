@@ -1,10 +1,12 @@
-import Weather from "./Weather";
 import "./App.css";
+
+import SearchEngine from "./SearchEngine";
 
 export default function App() {
   return (
     <div className="App">
-      <Weather />
+      <h1>Weather App</h1>
+      <SearchEngine />
     </div>
   );
 }
