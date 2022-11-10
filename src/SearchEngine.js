@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+import "./WeatherPage.css";
+
 export default function SearchEngine() {
   const [city, setCity] = useState("");
   const [filled, setFilled] = useState(false);
@@ -32,8 +34,17 @@ export default function SearchEngine() {
 
   let form = (
     <form onSubmit={HandleSubmit}>
-      <input type="search" placeholder="Type a city" onChange={updateCity} />
-      <input type="submit" value="search" />
+      <input
+        className="form-control-search"
+        type="search"
+        placeholder="Type a city"
+        onChange={updateCity}
+      />
+      <input
+        className="form-control btn btn-primary shadow-sm"
+        type="submit"
+        value="search"
+      />
     </form>
   );
 
